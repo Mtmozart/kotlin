@@ -1,11 +1,10 @@
+import com.google.gson.Gson
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
-import java.net.http.HttpResponse
 import java.net.http.HttpResponse.BodyHandlers
 
-//TIP Press <shortcut raw="SHIFT"/> twice to open the Search Everywhere dialog and type <b>show whitespaces</b>,
-// then press <shortcut raw="ENTER"/>. You can now see whitespace characters in your code.
+
 fun main() {
     val client: HttpClient = HttpClient.newHttpClient ();
     val request = HttpRequest.newBuilder()
@@ -15,11 +14,8 @@ fun main() {
         .send(request, BodyHandlers.ofString())
 
     val json = response.body()
-    println(json);
 
-    val meuJogo = Jogo("Batman: Arkham Asylum Game of the Year Edition", "https:\\/\\/cdn.cloudflare.steamstatic.com\\/steam\\/apps\\/35140\\/capsule_sm_120.jpg?t=1681938587")
-
-println(meuJogo);
-    val novoJogo = Jogo(capa = "https:\\/\\/cdn.cloudflare.steamstatic.com\\/steam\\/apps\\/35140\\/capsule_sm_120.jpg?t=1681938587", titulo = "Batman: Arkham Asylum Game of the Year Edition", )
-    println(novoJogo);
+    val gson = Gson();
+    val meuJogo = gson.fromJson(json, InfoJogo::class.java);
+    println(meuJogo);
 }
