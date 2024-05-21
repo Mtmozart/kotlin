@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1958d5e3-6da0-4d33-b65f-429b02d6a57e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/InfoApiShark.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/services/Consumer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/TestGamer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Gamer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/InfoJogo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/InfoJogo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Jogo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Jogo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InfoJogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InfoJogo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Jogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Jogo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainKt.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +18,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -46,6 +40,7 @@
   "keyToString": {
     "Kotlin.MainKt (1).executor": "Run",
     "Kotlin.MainKt.executor": "Run",
+    "Kotlin.TestGamerKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -64,7 +59,7 @@
       <recent name="br.com.alugames.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt (1)">
+  <component name="RunManager" selected="Kotlin.TestGamerKt">
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alugames.main.MainKt" />
       <module name="Alugames" />
@@ -79,9 +74,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestGamerKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alugames.main.TestGamerKt" />
+      <module name="AluGames" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainKt (1)" />
+        <item itemvalue="Kotlin.TestGamerKt" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
     </recent_temporary>
