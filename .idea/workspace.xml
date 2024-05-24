@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1958d5e3-6da0-4d33-b65f-429b02d6a57e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/main/TestGamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/TestGamer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/main/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Gamer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/main/TestGamerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/main/TestGamerKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Gamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Gamer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +59,14 @@
       <recent name="br.com.alugames.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.TestGamerKt">
+  <component name="RunManager" selected="Kotlin.MainKt (1)">
+    <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.alugames.main.MainKt" />
+      <module name="AluGames" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.alugames.main.MainKt" />
       <module name="Alugames" />
@@ -85,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.MainKt (1)" />
         <item itemvalue="Kotlin.TestGamerKt" />
         <item itemvalue="Kotlin.MainKt" />
       </list>
