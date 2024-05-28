@@ -3,6 +3,7 @@ package br.com.alugames.main
 import br.com.alugames.model.Gamer
 import br.com.alugames.model.Jogo
 import br.com.alugames.services.Consumer
+import transformAge
 import java.util.*
 
 fun main() {
@@ -11,6 +12,7 @@ fun main() {
     val gamer = Gamer.gamerCreate(read)
     println("Cadastro concluído com sucesso. Dados: ");
     println(gamer)
+    println("Idade do gamer: " + gamer.dateOfBirth?.transformAge())
     do {
         println("Digite o código de jogo para busca:")
         val busca = read.nextLine()

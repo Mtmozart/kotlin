@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1958d5e3-6da0-4d33-b65f-429b02d6a57e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/utils/stringExtentation.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/main/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/Main.kt" afterDir="false" />
     </list>
