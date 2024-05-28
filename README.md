@@ -11,7 +11,7 @@ Recursos Principais:
      
 ## Primeiras impressões: 
 
-Seu fim de extensão e "kt" e diferente de toda a verbosidade do Java para fazer um olá mundo, o kotlin permite de maneira pem concisa o usar, através de um "fun", que é o termo usado para funções no kotlin, como no exemplo:
+Seu fim de extensão e "kt" e diferente de toda a verbosidade do Java para fazer um olá mundo, o kotlin permite de maneira bem concisa dizer o famoso, através do termo "fun", este é o termo usado para funções no kotlin, como no exemplo:
 ```kotlin
   fun main() {
       println("Olá, Mundo!")
@@ -28,6 +28,7 @@ class Pessoa {
 ### Tipagem dinâmica:
 
 O Kotlin permite a tipagem dinâmica, de modo que eu não preciso a passar como no java, isso não signigica que eu não possa passar, inclusive acho que isto é uma boa prática.
+
 ```kotlin
 val x = 10 // O tipo de x será inferido como Int
 val y = "Olá" // O tipo de y será inferido como String
