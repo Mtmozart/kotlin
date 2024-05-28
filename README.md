@@ -27,7 +27,7 @@ class Pessoa {
 ```
 ### Tipagem dinâmica:
 
-O Kotlin permite a tipagem dinâmica, de modo que eu não preciso a passar como no java, isso não signigica que eu não possa passar, inclusive acho que isto é uma boa prática.
+O Kotlin permite a tipagem dinâmica, de modo que eu não preciso a passar como no java, isso não significa que eu não possa passar, inclusive imagino que isto é uma boa prática.
 
 ```kotlin
 val x = 10 // O tipo de x será inferido como Int
