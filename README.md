@@ -45,8 +45,21 @@ idade = 31 // OK, pois 'var' permite reatribuição
 val nome = "João" // Declara uma variável somente leitura
 nome = "Maria" // ERRO: 'val' não permite reatribuição
 var minhaVariavel: String? = null
-
 ```
+* Tipos de variáveis
+São os tipos de variáveis do kotlin:
+
+- Números: Byte, Short, Int, Long, Float, Double
+- Caracteres: Char
+- Booleanos: Boolean
+- Strings: String
+- Arrays: Array
+- Listas e Conjuntos: List, MutableList, Set, MutableSet
+- Mapas: Map, MutableMap
+- Tipos Nulos: Tipo?
+- Classes e Objetos: class (definido pelo usuário)
+- Enums: enum class
+
  ## Classes
  
 Em Kotlin, as classes de dados são declaradas usando a palavra-chave "data class", seguida pelo nome da classe e, entre parênteses, os atributos obrigatórios do construtor primário. As definições adicionais, como propriedades e métodos, são colocadas entre chaves. 
