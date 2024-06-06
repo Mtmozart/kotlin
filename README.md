@@ -138,7 +138,7 @@ result.onFailure {
 ```
 * Outros métodos:
 
-  | Método               | Descrição                                                                                     |
+| Método               | Descrição                                                                                     |
 |----------------------|------------------------------------------------------------------------------------------------|
 | `getOrNull()`        | Retorna o valor se a operação foi bem-sucedida ou `null` se falhou.                            |
 | `exceptionOrNull()`  | Retorna a exceção se a operação falhou ou `null` se foi bem-sucedida.                          |
