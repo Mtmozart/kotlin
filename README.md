@@ -25,7 +25,7 @@ class Pessoa {
     var idade: Int = 0
 }
 ```
-### Tipagem dinâmica:
+## Tipagem dinâmica:
 
 O Kotlin permite a tipagem dinâmica, de modo que eu não preciso a passar como no java, isso não significa que eu não possa passar, inclusive imagino que isto é uma boa prática.
 
@@ -47,19 +47,13 @@ nome = "Maria" // ERRO: 'val' não permite reatribuição
 var minhaVariavel: String? = null
 ```
 * Tipos de variáveis
-* 
+  
 | Categoria              | Tipos                                              |
 |------------------------|----------------------------------------------------|
 | Números                | Byte, Short, Int, Long, Float, Double              |
 | Caracteres             | Char                                               |
 | Booleanos              | Boolean                                            |
 | Strings                | String                                             |
-| Arrays                 | Array                                              |
-| Listas e Conjuntos     | List, MutableList, Set, MutableSet                 |
-| Mapas                  | Map, MutableMap                                    |
-| Tipos Nulos            | Tipo?                                              |
-| Classes e Objetos      | class (definido pelo usuário)                      |
-| Enums                  | enum class                                         |
 
  ## Classes
  
@@ -104,7 +98,7 @@ Para sobercarregar uma classe usamos o "override" antes da determinação "fun",
         return "Gamer(name='$name', email='$email', dateOfBirth='$dateOfBirth', user=$user, internalId=$internalId)"
 }
 ```
-**Nota: para chamar um atributo da classe, usa-se o marcador "$", como no exemplo.
+** Nota: para chamar um atributo da classe, usa-se o marcador "$", como no exemplo.
 ** Manipulção da string:
 
 Em Kotlin, você pode formatar strings de várias maneiras, sento estas as principais:
