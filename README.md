@@ -38,13 +38,31 @@ val z: Any = 3.14 // Aqui, z é explicitamente declarado como Any, permitindo qu
 ### Declaração de variáveis:
 
 A declração de variavéis no kotlin são feitas por dois termos, var e val, a diferença entre eles é que o val é imuntável, ou seja, uma constante, geralmente usado para leitura.
+
 ```kotlin
 var idade = 30 // Declara uma variável mutável
 idade = 31 // OK, pois 'var' permite reatribuição
 val nome = "João" // Declara uma variável somente leitura
 nome = "Maria" // ERRO: 'val' não permite reatribuição
+```
+ ## Classes
+ Em kotlin as classes são definidas pelas tags "data class" em seguida o nome dela, dentro dos parentêses eu posso passar os atributos obrigatórios do constructor inicial, e fora dela, entre as chaves os parâmetros e mêtodos, destaca-se o fato do kotlin entender identação:
+ ```kotlin
+ata class Gamer(var name: String, var email: String) {
+   //parâmetros não obritórios:
+    var dateOfBirth: String = ""
+    var user: String? = null
+    var internalId: String? = null
+    val findsGame = mutableListOf<Jogo?>()
+      //constructor secundário
+    constructor(name: String, email: String, dateOfBirth: String, user: String) : this(name, email) {
+        this.dateOfBirth = dateOfBirth
+        this.user = user
+        createInternalId()
+    }
 
 ```
+
 
 
 
