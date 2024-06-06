@@ -126,5 +126,29 @@ Podemos tratar um erro com uma exception, assim como no java:
 
     }
 ```
-Mas também pode tratar de uma maneira diferente,
+Mas também pode tratar de uma maneira diferente, que se chama "programação com resultado", deta maneira o Kotlin tem métodos que permitem o tratamento de ações que podem ou não dá erro, conforme exemplo:
+```Java
+ 
+result.onFailure {
+            método de se a requisiçao falha, poderia inserir um tratamento de erro.
+        }
+        result.onSuccess {
+        caso dê certo, trabalha aqui.
+          }
+```
+* Outros métodos:
+
+  | Método               | Descrição                                                                                     |
+|----------------------|------------------------------------------------------------------------------------------------|
+| `getOrNull()`        | Retorna o valor se a operação foi bem-sucedida ou `null` se falhou.                            |
+| `exceptionOrNull()`  | Retorna a exceção se a operação falhou ou `null` se foi bem-sucedida.                          |
+| `getOrElse(default)` | Retorna o valor se a operação foi bem-sucedida ou um valor padrão fornecido se falhou.         |
+| `getOrThrow()`       | Retorna o valor se a operação foi bem-sucedida ou lança a exceção se falhou.                   |
+| `fold(onSuccess, onFailure)` | Aplica a função `onSuccess` se a operação foi bem-sucedida ou `onFailure` se falhou.        |
+| `map(transform)`     | Transforma o valor de sucesso usando a função fornecida ou retorna o resultado original se falhou. |
+| `mapCatching(transform)` | Transforma o valor de sucesso usando a função fornecida, capturando exceções lançadas.         |
+| `recover(transform)` | Transforma o resultado de falha usando a função fornecida ou retorna o valor de sucesso original.  |
+| `recoverCatching(transform)` | Transforma o resultado de falha usando a função fornecida, capturando exceções lançadas.     |
+
+
 
