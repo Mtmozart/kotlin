@@ -111,5 +111,20 @@ Em Kotlin, você pode formatar strings de várias maneiras, sento estas as princ
 
  Formatando Números com Precisão: Use especificadores de formato com String.format, por exemplo, String.format("Pi com duas casas decimais: %.2f", pi).
 
+### Tratamento de erro em Kotlin:
 
+Podemos tratar um erro com uma exception, assim como no java:
+
+```Java
+   fun emailValidator(): String {
+        val regex = Regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")
+        if (regex.matches(email)) {
+            return email;
+        } else {
+            throw IllegalArgumentException("Email inválido.")
+        }
+
+    }
+```
+Mas também pode tratar de uma maneira diferente,
 
