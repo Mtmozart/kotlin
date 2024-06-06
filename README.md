@@ -37,16 +37,20 @@ val z: Any = 3.14 // Aqui, z é explicitamente declarado como Any, permitindo qu
 
 ### Declaração de variáveis:
 
-A declração de variavéis no kotlin são feitas por dois termos, var e val, a diferença entre eles é que o val é imuntável, ou seja, uma constante, geralmente usado para leitura.
+A declaração de variáveis em Kotlin é feita por dois termos: "var" e "val". A diferença entre eles é que "val" é imutável, ou seja, uma constante, geralmente usada para leitura. Para indicar se uma variável pode ser nula, basta adicionar o ponto de interrogação. O mesmo vale para atributos. Também é importante destacar que as strings devem ser inicializadas com um valor, mesmo que vazio.
 
 ```kotlin
 var idade = 30 // Declara uma variável mutável
 idade = 31 // OK, pois 'var' permite reatribuição
 val nome = "João" // Declara uma variável somente leitura
 nome = "Maria" // ERRO: 'val' não permite reatribuição
+var minhaVariavel: String? = null
+
 ```
  ## Classes
- Em kotlin as classes são definidas pelas tags "data class" em seguida o nome dela, dentro dos parentêses eu posso passar os atributos obrigatórios do constructor inicial, e fora dela, entre as chaves os parâmetros e mêtodos, destaca-se o fato do kotlin entender identação:
+ 
+Em Kotlin, as classes de dados são declaradas usando a palavra-chave "data class", seguida pelo nome da classe e, entre parênteses, os atributos obrigatórios do construtor primário. As definições adicionais, como propriedades e métodos, são colocadas entre chaves. 
+
  ```kotlin
 ata class Gamer(var name: String, var email: String) {
    //parâmetros não obritórios:
@@ -62,7 +66,21 @@ ata class Gamer(var name: String, var email: String) {
     }
 
 ```
+### Métodos getters and setters
+Deve-se usar o setter abaixo do atributo, passando um valor, argumentando que o campo 'field' é igual ao valor que receberá, podendo inclusive passar parâmetros. Além disso, é importante mencionar que o getter pode ser definido para fornecer uma lógica personalizada ao acessar o valor do atributo, ademais, em Kotlin, se nenhum getter personalizado é definido, o compilador cria automaticamente um getter padrão que simplesmente retorna o valor do atributo, o que não impede de criar um personalidado.
 
-
+```kotlin
+var user: String? = null
+    set(value) {
+        field = value
+        if (internalId.isNullOrBlank()) {
+            createInternalId()
+        }
+    }
+    get() = field
+//sete privado
+var internalId: String? = null
+        private set
+```
 
 
