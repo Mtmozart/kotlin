@@ -47,18 +47,19 @@ nome = "Maria" // ERRO: 'val' não permite reatribuição
 var minhaVariavel: String? = null
 ```
 * Tipos de variáveis
-São os tipos de variáveis do kotlin:
-
-- Números: Byte, Short, Int, Long, Float, Double
-- Caracteres: Char
-- Booleanos: Boolean
-- Strings: String
-- Arrays: Array
-- Listas e Conjuntos: List, MutableList, Set, MutableSet
-- Mapas: Map, MutableMap
-- Tipos Nulos: Tipo?
-- Classes e Objetos: class (definido pelo usuário)
-- Enums: enum class
+* 
+| Categoria              | Tipos                                              |
+|------------------------|----------------------------------------------------|
+| Números                | Byte, Short, Int, Long, Float, Double              |
+| Caracteres             | Char                                               |
+| Booleanos              | Boolean                                            |
+| Strings                | String                                             |
+| Arrays                 | Array                                              |
+| Listas e Conjuntos     | List, MutableList, Set, MutableSet                 |
+| Mapas                  | Map, MutableMap                                    |
+| Tipos Nulos            | Tipo?                                              |
+| Classes e Objetos      | class (definido pelo usuário)                      |
+| Enums                  | enum class                                         |
 
  ## Classes
  
@@ -95,5 +96,26 @@ var user: String? = null
 var internalId: String? = null
         private set
 ```
+### Sobrecarga e string
+Para sobercarregar uma classe usamos o "override" antes da determinação "fun", como no método toString:
+
+```kotlin
+ override fun toString(): String {
+        return "Gamer(name='$name', email='$email', dateOfBirth='$dateOfBirth', user=$user, internalId=$internalId)"
+}
+```
+**Nota: para chamar um atributo da classe, usa-se o marcador "$", como no exemplo.
+** Manipulção da string:
+
+Em Kotlin, você pode formatar strings de várias maneiras, sento estas as principais:
+
+ String Templates: Use $ para interpolar variáveis diretamente dentro de uma string, por exemplo, "Meu nome é $nome e eu tenho $idade anos.".
+
+ String.format: Similar ao printf em outras linguagens, como em String.format("Meu nome é %s e eu tenho %d anos.", nome, idade).
+
+ Função format da classe String: Função de extensão para strings, como em "Meu nome é %s e eu tenho %d anos.".format(nome, idade).
+
+ Formatando Números com Precisão: Use especificadores de formato com String.format, por exemplo, String.format("Pi com duas casas decimais: %.2f", pi).
+
 
 
