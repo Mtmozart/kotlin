@@ -3,79 +3,75 @@ package br.com.alugames.model
 import java.util.Scanner
 import kotlin.random.Random
 
-data class Gamer(var name: String, var email: String) {
-    var dateOfBirth: String = ""
-    var user: String? = null
+data class Gamer(var nome:String, var email:String) {
+    var dataNascimento:String? = null
+    var usuario:String? = null
         set(value) {
             field = value
-            if (internalId.isNullOrBlank()) {
-                createInternalId()
+            if(idInterno.isNullOrBlank()) {
+                criarIdInterno()
             }
         }
-    var internalId: String? = null
+    var idInterno:String? = null
         private set
-    val findsGame = mutableListOf<Jogo?>()
+    val jogosBuscados = mutableListOf<Jogo?>()
 
-    constructor(name: String, email: String, dateOfBirth: String, user: String) : this(name, email) {
-        this.dateOfBirth = dateOfBirth
-        this.user = user
-        createInternalId()
+    constructor(nome: String, email: String, dataNascimento:String, usuario:String):
+            this(nome, email) {
+        this.dataNascimento = dataNascimento
+        this.usuario = usuario
+        criarIdInterno()
     }
 
     init {
-        if (name.isNullOrBlank()) {
-            throw IllegalArgumentException("Nome em branco.")
+        if (nome.isNullOrBlank()) {
+            throw IllegalArgumentException("Nome está em branco")
         }
-        this.email = emailValidator()
+        this.email = validarEmail()
     }
-
 
     override fun toString(): String {
-        return "Gamer(name='$name', email='$email', dateOfBirth='$dateOfBirth', user=$user, internalId=$internalId)"
+        return "Gamer(nome='$nome', email='$email', dataNascimento=$dataNascimento, usuario=$usuario, idInterno=$idInterno)"
     }
 
-    fun createInternalId() {
-        val number = Random.nextInt(100000);
-        val tag = String.format("%04d", number);
-        internalId = "$user#$tag"
+    fun criarIdInterno() {
+        val numero = Random.nextInt(10000)
+        val tag = String.format("%04d", numero)
+
+        idInterno = "$usuario#$tag"
     }
 
-
-    fun emailValidator(): String {
+    fun validarEmail(): String {
         val regex = Regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")
         if (regex.matches(email)) {
-            return email;
+            return email
         } else {
-            throw IllegalArgumentException("Email inválido.")
+            throw IllegalArgumentException("Email inválido")
         }
 
     }
 
     companion object {
-        fun gamerCreate(read: Scanner): Gamer {
+        fun criarGamer(leitura: Scanner): Gamer {
             println("Boas vindas ao AluGames! Vamos fazer seu cadastro. Digite seu nome:")
-            val name = read.nextLine()
+            val nome = leitura.nextLine()
             println("Digite seu e-mail:")
-            val email = read.nextLine()
+            val email = leitura.nextLine()
             println("Deseja completar seu cadastro com usuário e data de nascimento? (S/N)")
-            val option = read.nextLine()
-            if (option.equals("s", true)) {
-                println("Digite sua data de nascimento(DD/MM/AAAA):")
-                val dateOfBirth = read.nextLine()
-                println("Digite seu nome de usuário:")
-                val user = read.nextLine()
+            val opcao = leitura.nextLine()
 
-                return Gamer(
-                    name,
-                    email,
-                    dateOfBirth,
-                    user
-                )
+            if (opcao.equals("s", true)) {
+                println("Digite sua data de nascimento(DD/MM/AAAA):")
+                val nascimento = leitura.nextLine()
+                println("Digite seu nome de usuário:")
+                val usuario = leitura.nextLine()
+
+                return Gamer(nome, email, nascimento, usuario)
+            } else {
+                return Gamer (nome, email)
             }
-            return Gamer(
-                name,
-                email
-            )
+
         }
     }
+
 }

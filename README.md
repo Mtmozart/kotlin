@@ -57,7 +57,7 @@ var minhaVariavel: String? = null
 
  ## Classes
  
-Em Kotlin, as classes de dados são declaradas usando a palavra-chave "data class", seguida pelo nome da classe e, entre parênteses, os atributos obrigatórios do construtor primário. As definições adicionais, como propriedades e métodos, são colocadas entre chaves. 
+Em Kotlin, as classes de dados são declaradas usando a palavra-chave "class" para classes comuns e classes sem contructor devem ter o "data", seguida pelo nome da classe e, entre parênteses, os atributos obrigatórios do construtor primário. As definições adicionais, como propriedades e métodos, são colocadas entre chaves. 
 
  ```kotlin
 ata class Gamer(var name: String, var email: String) {

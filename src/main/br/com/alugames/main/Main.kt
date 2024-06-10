@@ -9,22 +9,22 @@ import java.util.*
 fun main() {
 
     val read = Scanner(System.`in`)
-    val gamer = Gamer.gamerCreate(read)
+    val gamer = Gamer.criarGamer(read)
     println("Cadastro concluído com sucesso. Dados: ");
     println(gamer)
-    println("Idade do gamer: " + gamer.dateOfBirth?.transformAge())
+    println("Idade do gamer: " + gamer.dataNascimento?.transformAge())
     do {
         println("Digite o código de jogo para busca:")
         val busca = read.nextLine()
 
-        val findGameApi = Consumer()
-        var infoGame = findGameApi.search(busca);
+        val buscaApi = Consumer()
+        val informacaoJogo = buscaApi.buscaJogo(busca)
 
         var myGame: Jogo? = null;
         val result = runCatching {
             myGame = Jogo(
-                infoGame.info.title,
-                infoGame.info.thumb
+                informacaoJogo.info.title,
+                informacaoJogo.info.thumb
             )
         }
         result.onFailure {
@@ -44,7 +44,7 @@ fun main() {
             } else {
                 println("Caractere inválido");
             }
-            gamer.findsGame.add(myGame)
+            gamer.jogosBuscados.add(myGame)
 
         }
         println("Deseja buscar outro jogo? S/N")
@@ -52,17 +52,17 @@ fun main() {
     } while (response.equals("s", ignoreCase = true))
 
     println("Lista de jogos buscados")
-    println(gamer.findsGame)
+    println(gamer.jogosBuscados)
     println("Jogos ordenados por título\n")
-    gamer.findsGame.sortBy {
+    gamer.jogosBuscados.sortBy {
         it?.titulo
     }
 
-    val jogosFiltrados = gamer.findsGame.filter {
+    val jogosFiltrados = gamer.jogosBuscados.filter {
         it?.titulo?.contains("batman", true) ?: false
     }
 
-    gamer.findsGame.forEach{
+    gamer.jogosBuscados.forEach{
         println("Titulo: " + it?.titulo)
     }
 

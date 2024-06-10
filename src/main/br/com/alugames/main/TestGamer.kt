@@ -11,14 +11,14 @@ fun main(){
     //escopo function -> let, run, with and also.
 
     gamer1.let {
-        it.dateOfBirth = "05/08/1998"
-        it.user= "skywalker"
+        it.dataNascimento = "05/08/1998"
+        it.usuario= "skywalker"
 
     }.also {
-        gamer1.internalId
+        gamer1.idInterno
     }
 
     println(gamer1)
-    gamer1.user = "denovo"
+    gamer1.usuario = "denovo"
     println(gamer1)
 }
