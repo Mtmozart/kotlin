@@ -1,5 +1,6 @@
 package br.com.alugames.model
 
+import java.time.LocalDate
 import java.util.Scanner
 import kotlin.random.Random
 
@@ -51,6 +52,9 @@ data class Gamer(var nome:String, var email:String) {
 
     }
 
+    fun alugar(jogo: Jogo, dataInicial: LocalDate, dataFinal: LocalDate): Aluguel{
+        return Aluguel(this, jogo, dataFinal, dataFinal);
+    }
     companion object {
         fun criarGamer(leitura: Scanner): Gamer {
             println("Boas vindas ao AluGames! Vamos fazer seu cadastro. Digite seu nome:")
