@@ -1,19 +1,24 @@
 package br.com.alugames.main
 
+import br.com.alugames.model.Periodo
 import br.com.alugames.services.Consumer
+import java.time.LocalDate
 
 fun main(){
     val consumo = Consumer()
-    val listGamer = consumo.buscaGamers()
-    val listaJogosJson = consumo.buscaJogosJson()
+    val listaGamers = consumo.buscaGamers()
+    val listaJogoJson = consumo.buscaJogosJson()
 //    println(listGamer)
 
-    val gamer1 = listGamer.get(3)
-    val jogo1 = listaJogosJson.get(5)
+    val gamerMatheus= listaGamers.get(3)
+    val jogoResidentVillage = listaJogoJson.get(10)
 
-    println(gamer1)
-    println(jogo1)
+    println(gamerMatheus)
+    println(jogoResidentVillage)
 
-    var alugar = gamer1.alugar(jogo1)
-    println(alugar)
+    val dataInicial = LocalDate.of(2023, 6, 1)
+    val dataFinal = LocalDate.of(2023, 6, 30)
+    val periodo = Periodo(dataInicial, dataFinal)
+    val aluguel = gamerMatheus.alugar(jogoResidentVillage, periodo)
+    println(aluguel)
 }
