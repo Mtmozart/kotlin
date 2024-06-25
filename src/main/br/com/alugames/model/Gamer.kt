@@ -15,7 +15,10 @@ data class Gamer(var nome:String, var email:String) {
         }
     var idInterno:String? = null
         private set
+    var plano: Plano = PlanoAvulso("BRONZE")
     val jogosBuscados = mutableListOf<Jogo?>()
+    val jogosAlugados = mutableListOf<Aluguel>()
+    private val listaNotas = mutableListOf<Int>()
 
     constructor(nome: String, email: String, dataNascimento:String, usuario:String):
             this(nome, email) {
@@ -32,7 +35,13 @@ data class Gamer(var nome:String, var email:String) {
     }
 
     override fun toString(): String {
-        return "Gamer(nome='$nome', email='$email', dataNascimento=$dataNascimento, usuario=$usuario, idInterno=$idInterno)"
+        return "Gamer:\n" +
+                "Nome: $nome\n" +
+                "Email: $email\n" +
+                "Data Nascimento: $dataNascimento\n" +
+                "Usuario: $usuario\n" +
+                "IdInterno: $idInterno\n"
+
     }
 
     fun criarIdInterno() {
@@ -49,12 +58,21 @@ data class Gamer(var nome:String, var email:String) {
         } else {
             throw IllegalArgumentException("Email inválido")
         }
-
     }
 
-    fun alugar(jogo: Jogo, periodo: Periodo): Aluguel{
-        return Aluguel(this, jogo, periodo);
+    fun alugaJogo(jogo: Jogo, periodo: Periodo): Aluguel {
+        val aluguel = Aluguel(this, jogo, periodo)
+        jogosAlugados.add(aluguel)
+
+        return aluguel
     }
+
+    fun jogosDoMes(mes:Int): List<Jogo> {
+        return jogosAlugados
+            .filter { aluguel ->  aluguel.periodo.dataInicial.monthValue == mes}
+            .map { aluguel ->  aluguel.jogo}
+    }
+
     companion object {
         fun criarGamer(leitura: Scanner): Gamer {
             println("Boas vindas ao AluGames! Vamos fazer seu cadastro. Digite seu nome:")
@@ -78,4 +96,4 @@ data class Gamer(var nome:String, var email:String) {
         }
     }
 
-}
+}}

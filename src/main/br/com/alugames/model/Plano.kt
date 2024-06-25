@@ -1,4 +1,7 @@
 package br.com.alugames.model
 
-class Plano {
+open class Plano(tipo: String) {
+   open fun obterValor(aluguel: Aluguel): Double{
+        return  aluguel.jogo.preco * aluguel.periodo.emDias
+    }
 }

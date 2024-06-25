@@ -1,3 +1,5 @@
 package br.com.alugames.model
 
-data class PlanoAvulso()
+class PlanoAvulso(tipo: String): Plano(tipo) {
+
+}
