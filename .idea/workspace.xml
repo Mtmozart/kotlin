@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1958d5e3-6da0-4d33-b65f-429b02d6a57e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Recomendavel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/main/testeJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/testeJson.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/Aluguel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Aluguel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Gamer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/Plano.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Plano.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/PlanoAssinatura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/PlanoAssinatura.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/PlanoAvulso.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/PlanoAvulso.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/main/TesteJsonKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/main/TesteJsonKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Aluguel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Aluguel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Gamer$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Gamer$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Gamer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Gamer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Plano.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Plano.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/PlanoAssinatura.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/PlanoAssinatura.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,7 @@
         <option value="Kotlin File" />
         <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>

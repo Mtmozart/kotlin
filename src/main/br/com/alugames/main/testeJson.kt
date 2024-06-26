@@ -20,11 +20,14 @@ fun main(){
     val dataInicial = LocalDate.of(2023, 6, 1)
     val dataFinal = LocalDate.of(2023, 6, 30)
     val periodo = Periodo(dataInicial, dataFinal)
-    val aluguel = gamerMatheus.alugar(jogoResidentVillage, periodo)
+    val aluguel = gamerMatheus.alugaJogo(jogoResidentVillage, periodo)
     println(aluguel)
 
     val gamerCamila = listaGamers.get(5)
-    gamerCamila.plano = PlanoAssinatura("PRATA", 9.90, 3)
-    gamerCamila.alugar(jogoResidentVillage, periodo)
+    gamerCamila.plano = PlanoAssinatura("PRATA", 9.90, 3, 0.15)
+    gamerCamila.alugaJogo(jogoResidentVillage, periodo)
+    gamerCamila.recomendar(7)
+    gamerCamila.recomendar(10)
+    gamerCamila.recomendar(8)
     println(gamerCamila.jogosAlugados)
 }
