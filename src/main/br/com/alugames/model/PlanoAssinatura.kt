@@ -7,7 +7,7 @@ class PlanoAssinatura(tipo: String, val mensalidade: Double, val jogosIncluidos:
         return if (totalJogosNoMes <= jogosIncluidos){
              0.0
         } else {
-            var valorOriginal = super.obterValor(aluguel)
+            var  valorOriginal = super.obterValor(aluguel)
             if(aluguel.gamer.media > 8){
                 valorOriginal -= valorOriginal * percentualDescontoReputacao
             }

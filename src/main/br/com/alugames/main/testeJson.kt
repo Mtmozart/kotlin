@@ -1,9 +1,8 @@
 package br.com.alugames.main
 
-import br.com.alugames.model.Periodo
-import br.com.alugames.model.PlanoAssinatura
 import br.com.alugames.services.Consumer
-import java.time.LocalDate
+import com.google.gson.GsonBuilder
+import java.io.File
 
 fun main(){
     val consumo = Consumer()
@@ -11,8 +10,7 @@ fun main(){
     val listaJogoJson = consumo.buscaJogosJson()
 //    println(listGamer)
 
-    val gamerMatheus= listaGamers.get(3)
-    val jogoResidentVillage = listaJogoJson.get(10)
+  /*  val gamerMatheus= listaGamers.get(3)
 
     println(gamerMatheus)
     println(jogoResidentVillage)
@@ -30,4 +28,36 @@ fun main(){
     gamerCamila.recomendar(10)
     gamerCamila.recomendar(8)
     println(gamerCamila.jogosAlugados)
+
+    gamerCamila.recomendarJogo(jogoResidentVillage, 7)
+ println(gamerCamila.jogosRecomendados)*/
+    val gamerCamila = listaGamers.get(5)
+
+    val gamerCaroline = listaGamers.get(3)
+    val jogoResidentVillage = listaJogoJson.get(10)
+    val jogoSpider = listaJogoJson.get(13)
+    val jogoTheLastOfUs = listaJogoJson.get(2)
+    val jogoDandara = listaJogoJson.get(5)
+    val jogoAssassins = listaJogoJson.get(4)
+    val jogoCyber = listaJogoJson.get(6)
+    val jogoGod = listaJogoJson.get(7)
+    val jogoSkyrim = listaJogoJson.get(18)
+
+    gamerCamila.recomendarJogo(jogoResidentVillage, 7)
+    gamerCamila.recomendarJogo(jogoTheLastOfUs, 10)
+    gamerCamila.recomendarJogo(jogoAssassins, 8)
+    gamerCamila.recomendarJogo(jogoCyber, 7)
+    gamerCamila.recomendarJogo(jogoGod, 10)
+    gamerCamila.recomendarJogo(jogoDandara, 8)
+    gamerCamila.recomendarJogo(jogoSkyrim, 8)
+    gamerCamila.recomendarJogo(jogoSpider, 6)
+
+    val gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
+    val serializacao = gson.toJson(gamerCamila.jogosRecomendados)
+    println(serializacao)
+    val arquivo = File("jogosRecomendados-${gamerCamila.nome}.json")
+    arquivo.writeText(serializacao)
+    println(arquivo.absolutePath)
+
+
 }
