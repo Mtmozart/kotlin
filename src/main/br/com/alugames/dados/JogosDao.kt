@@ -4,6 +4,18 @@ import br.com.alugames.model.Jogo
 
 class JogosDao {
     fun getJogos(): List<Jogo> {
+        val manager = Banco.getEntityManager();
+        try {
+            val query = manager.createQuery("FROM jogoEntity", JogoEntity::class.java)
+            return query.resultList.map {
+                entity -> Jogo(entity.titulo, entity.capa, entity.preco, entity.descricao, entity.id)
+            }
+
+        }finally {
+            manager.close()
+        }
+    }
+   /* fun getJogos(): List<Jogo> {
         val listaJogo = mutableListOf<Jogo>()
         val conexao = Banco.obterConexao();
         if (conexao != null){
@@ -48,5 +60,5 @@ class JogosDao {
                 conexao.close()
             }
         }
-    }
+    }*/
 }

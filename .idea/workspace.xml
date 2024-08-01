@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1958d5e3-6da0-4d33-b65f-429b02d6a57e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/dados/JogosDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/br/com/alugames/dados/JogoEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/dados/Banco.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/dados/Banco.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/dados/JogosDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/dados/JogosDao.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/main/TesteBanco.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/main/TesteBanco.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/br/com/alugames/model/Jogo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/br/com/alugames/model/Jogo.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/dados/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/dados/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/dados/JogosDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/dados/JogosDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/main/TesteBancoKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/main/TesteBancoKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Jogo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/alugames/model/Jogo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
