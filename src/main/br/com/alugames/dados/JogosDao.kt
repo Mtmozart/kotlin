@@ -1,64 +1,22 @@
 package br.com.alugames.dados
 
 import br.com.alugames.model.Jogo
+import javax.persistence.EntityManager
 
-class JogosDao {
-    fun getJogos(): List<Jogo> {
-        val manager = Banco.getEntityManager();
-        try {
-            val query = manager.createQuery("FROM jogoEntity", JogoEntity::class.java)
-            return query.resultList.map {
-                entity -> Jogo(entity.titulo, entity.capa, entity.preco, entity.descricao, entity.id)
-            }
-
-        }finally {
-            manager.close()
-        }
-    }
-   /* fun getJogos(): List<Jogo> {
-        val listaJogo = mutableListOf<Jogo>()
-        val conexao = Banco.obterConexao();
-        if (conexao != null){
-            try {
-                val statement = conexao.createStatement()
-                val resultado = statement.executeQuery(
-                    "SELECT * FROM jogos"
-                );
-                while (resultado.next()) {
-                    val id = resultado.getInt("id")
-                    val titulo = resultado.getString("titulo")
-                    val capa = resultado.getString("capa")
-                    val descricao = resultado.getString("descricao")
-                    val preco = resultado.getDouble("preco")
-                    val jogo = Jogo(titulo, capa, preco, descricao)
-                    listaJogo.add(jogo)
-                }
-
-                statement.close()
-
-            } finally {
-                conexao.close()
-
-            }
-        }
-        return listaJogo
+class JogosDao( manager: EntityManager): DAO<Jogo, JogoEntity>(manager, JogoEntity::class.java) {
+    override fun toEntity(objeto: Jogo): JogoEntity {
+        return JogoEntity(objeto.titulo, objeto.capa, objeto.preco, objeto.descricao, objeto.id)
     }
 
-    fun adicionarJogo(jogo: Jogo) {
-        val conexao = Banco.obterConexao();
-        val insert = "INSERT INTO jogos (TITULO, CAPA, PRECO, DESCRICAO) VALUES (?, ?, ?, ?)"
-        if(conexao != null){
-            try {
-                val statement = conexao.prepareStatement(insert)
-                statement.setString(1, jogo.titulo)
-                statement.setString(2, jogo.descricao)
-                statement.setDouble(3, jogo.preco)
-                statement.setString(4, jogo.descricao)
-                statement.close()
-            }
-            finally {
-                conexao.close()
-            }
-        }
-    }*/
+    override fun toModel(entity: JogoEntity): Jogo {
+        return  Jogo(
+            entity.titulo,
+            entity.capa,
+            entity.preco,
+            entity.descricao,
+            entity.id
+        )
+    }
+
 }
+
